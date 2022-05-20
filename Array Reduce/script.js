@@ -11,6 +11,8 @@ const items = [
 // });
 
 const totalPrice = items.reduce((total, items) => {
+  console.log(`Total: ${total}`)
+  console.log(`Total: ${items.price}`)
   return total + items.price;
 }, 0);
 
