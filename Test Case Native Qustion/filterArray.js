@@ -6,6 +6,7 @@ const employees = [
 ];
 
 let onlyITEmployeed = employees.filter((e) => e.dept === "IT");
+console.log(onlyITEmployeed);
 
 for (let emp of onlyITEmployeed) {
   console.log(emp.empName);
@@ -63,3 +64,39 @@ const filterByLegCount = (array1, legCount) => {
 };
 
 console.log(filterByLegCount(animal, 0));
+
+let mixArray = [1, 4, 5, "Banana", 6, 1, 4, 4, 9, 3, "Banana"];
+
+const uniqueElement = mixArray.filter((element, index) => {
+  return mixArray.indexOf(element) === index;
+});
+
+console.log(uniqueElement, "tester");
+
+uniqueElement.sort((a, b) => {
+  // if else statement
+  // check if both element are number
+  if (typeof a === "number" && typeof b === "number") {
+    return a - b; // sort by number order
+  } else if (typeof a === "number") {
+    return -1; // numbers come before strings
+  } else if (typeof b === "number") {
+    return 1; // numbers come before strings
+  } else {
+    return a.localeCompare(b); // sort by string order
+  }
+
+  // switch case statement
+  // switch (true) {
+  //   case typeof a === "number" && typeof b === "number":
+  //     return a - b; // sort by number order
+  //   case typeof a === "number":
+  //     return -1; // numbers come before strings
+  //   case typeof b === "number":
+  //     return 1; // numbers come before strings
+  //   default:
+  //     return a.localeCompare(b); // sort by string order
+  // }
+});
+
+console.log(uniqueElement);
