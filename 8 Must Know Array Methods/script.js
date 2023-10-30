@@ -8,16 +8,12 @@ const items = [
   { name: "Keyboard", price: 25 },
 ];
 
-const filteredItems = items.filter((item) => {
-  return item.price <= 100;
-});
+const filteredItems = items.filter((item) => item.price <= 100);
 
 console.log(items);
 console.log(filteredItems);
 
-const itemNames = items.map((item) => {
-  return item.name;
-});
+const itemNames = items.map((item) => item.name);
 
 console.log(itemNames);
 
